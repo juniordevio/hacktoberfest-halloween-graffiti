@@ -15,7 +15,10 @@
   <header class="floater">
     <img class="jd" src="images/jd_logo.svg" alt="Junior Dev logo">
 
-    <h1>HacktoberFEST Halloween Graffiti <span class="emoji">👻</span></h1>
+    <h1>
+      <span class="emoji">👻</span>
+      HacktoberFEST Halloween Graffiti
+      <span class="emoji">👻</span></h1>
 
     <br />
     <div>
@@ -30,7 +33,7 @@
   </header>
 
   <div class="floater" id="sites">
-    <h2>🎃 Sites</h2>
+    <h2>Sites</h2>
     Check out the amazing sites below!
 
     <div class="sites">
@@ -39,14 +42,17 @@
   </div>
 
   <div class="floater" id="howto">
-    <h2>👻 How to contribute</h2>
-    Want to add your own site? We'd love you to! Follow the instructions below to make it happen. Feel free to ask for
-    help at any point if you are unsure of any of the steps. We are here to help!
+    <h2>How to contribute</h2>
+
+    <p>
+      Want to add your own site? We'd love you to! Follow the instructions below to make it happen. Feel free to ask for
+      help at any point if you are unsure of any of the steps. We are here to help!
+    </p>
 
     <h3>Step 1.</h3>
-    <p>You will need to clone this repository (repo) so you can begin editing the code. Head over to
-      <a href="https://github.com/juniordevio/hacktober-fest-halloween-graffiti">the GitHub repo</a> and
-      click the green "Clone or download" button to the right side of the page. Once the url is copied, use your
+    <p>You will need to clone this repository (repo) so you can begin editing the code. Head over to the
+      <a href="https://github.com/juniordevio/hacktober-fest-halloween-graffiti">JuniorDev HacktoberFEST GitHub repo</a>
+      and click the green "Clone or download" button to the right side of the page. Once the url is copied, use your
       preferred way to clone the repo locally. I will assume you are using terminal, in which case run a command like
       follows:
     </p>
@@ -66,7 +72,8 @@
 
     <h3>Step 3.</h3>
     <p>
-      To start building your own page, create an <code>.html</code> new file with your name. It is best to not use
+      To start building your own page, create an <span class="mono">.html</span> new file with your name. It is best to
+      not use
       spaces and instead use a dash to separate any words. Once you've created your file, paste in some basic HTML that
       will get you started, perhaps something like:
     </p>
@@ -78,7 +85,7 @@
     &lt;meta charset="UTF-8"&gt;
     &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
     &lt;meta http-equiv="X-UA-Compatible" content="ie=edge"&gt;
-    &lt;title&gt;Document&lt;/title&gt;
+    &lt;title&gt;Your name here&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
 
@@ -88,8 +95,9 @@
 
     <h3>Step 4.</h3>
     <p>
-      Much like the previous step, create a <code>.css</code> file with your name. You can then
-      link it in your <code>.html</code> file inside the <code>&lt;head&gt;</code> element with something like:
+      Much like the previous step, create a <span class="mono">.css</span> file with your name. You can then link it in
+      your <span class="mono">.html</span> file inside the <span class="mono">&lt;head&gt;</span> element with something
+      like:
     </p>
 
     <code>
@@ -108,6 +116,45 @@
     <h3>Step 8.</h3>
     <b>Merge when approved</b>
   </div>
+
+  <script type="text/javascript">
+    var emojis = ['👻', '🎃', '🕷']
+
+    function animateFly(e) {
+      var x = e.pageX
+      var y = e.pageY
+
+      var _doc = document.documentElement
+      var emoji = emojis[Math.floor(Math.random() * emojis.length)]
+      var angle = Math.floor(Math.random() * 360)
+
+      var _span = document.createElement('span')
+      _span.classList.add('zoomy')
+      _span.style.top = y + 'px'
+      _span.style.left = x + 'px'
+      _span.innerText = emoji
+      _span = _doc.appendChild(_span)
+
+      function zoom() {
+        if (x < 0 || x > _doc.clientWidth || y < 0) {
+          _doc.removeChild(_span)
+          return
+        }
+
+        x += Math.sin(angle) * 10
+        y += Math.cos(angle) * 10
+        _span.style.top = y + 'px';
+        _span.style.left = x + 'px';
+
+        window.requestAnimationFrame(zoom)
+      }
+
+      window.requestAnimationFrame(zoom)
+    }
+
+    document.addEventListener('click', animateFly)
+  </script>
+
 </body>
 
 </html>
