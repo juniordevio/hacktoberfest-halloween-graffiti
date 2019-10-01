@@ -5,9 +5,10 @@
 body {
   margin: 0;
   background: url("images/2spooky5me2.png");
-  background-size: 10%;
+  background-size: 100px;
+  background-color: #f2f2f2;
   min-height: 100vh;
-  font-family: Helvetica, sans-serif
+  font-family: Helvetica, sans-serif;
 }
 
 .floater {
@@ -15,12 +16,10 @@ body {
   width: 90%;
   max-width: 700px;
   padding: 2rem 1.5rem;
-  margin: 2rem auto 6rem auto;
+  margin: 2rem auto 6rem;
   color: black;
   background: white;
-  box-shadow: 10px 10px 1px black;
-  border-top: 4px double darkorange;
-  border-left: 4px double deeppink;
+  box-shadow: 10px 10px 0px black;
 }
 
 .jd {
@@ -42,9 +41,47 @@ h3 {
   font-family: "Barriecito", cursive;
 }
 
+h1 {
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+}
+
+h1,
+h2 {
+  text-shadow: 1px 1px 1px darkorange;
+}
+
+a,
+a:visited {
+  font-weight: 500;
+  color: darkorange;
+}
+
+a:hover {
+  color: orangered;
+}
+
+p {
+  line-height: 1.5;
+}
+
 .emoji {
   margin-top: 2rem;
-  font-size: 2rem;
+  font-size: 1.25rem;
+}
+
+.emoji:first-child {
+  margin-right: 1rem;
+}
+
+.emoji:last-child {
+  margin-left: 1rem;
 }
 
 .emoji {
@@ -59,9 +96,23 @@ h3 {
 
 code,
 pre {
-  background-color: #FFD1EA;
-  border-radius: 3px;
-  padding: 3px;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  line-height: 1.5;
+  padding: 0.5rem 1rem;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, 0.2);
+  overflow: auto;
+}
+
+code {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.mono {
+  font-family: monospace;
+  font-weight: bold;
 }
 
 @keyframes shake {
@@ -78,3 +129,11 @@ pre {
     transform: rotate(-10deg);
   }
 }
+
+.zoomy {
+  position: absolute;
+  font-size: 2rem;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
+
