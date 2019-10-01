@@ -1,0 +1,75 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: url("images/2spooky5me2.png");
+  background-size: 10%;
+  min-height: 100vh;
+  font-family: Helvetica, sans-serif
+}
+
+.floater {
+  position: relative;
+  width: 90%;
+  max-width: 700px;
+  padding: 2rem 1.5rem;
+  margin: 2rem auto 6rem auto;
+  color: black;
+  background: white;
+  box-shadow: 10px 10px 1px black;
+  border-top: 4px double darkorange;
+  border-left: 4px double deeppink;
+}
+
+.jd {
+  padding: 10px;
+  border-radius: 10px;
+  background: black;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Barriecito", cursive;
+}
+
+.emoji {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+
+.emoji {
+  display: inline-block;
+  animation: shake 1s infinite;
+}
+
+code,
+pre {
+  background-color: #FFD1EA;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  33% {
+    transform: rotate(10deg);
+  }
+
+  66% {
+    transform: rotate(-10deg);
+  }
+}
