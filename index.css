@@ -52,6 +52,11 @@ h3 {
   animation: shake 1s infinite;
 }
 
+.sites {
+  margin-top: 2rem;
+  column-count: 2;
+}
+
 code,
 pre {
   background-color: #FFD1EA;
