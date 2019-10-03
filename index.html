@@ -1,84 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HacktoberFEST Halloween Graffiti 🎃</title>
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/favicon.png" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Barriecito&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>HacktoberFEST Halloween Graffiti 🎃</title>
-  <link rel="stylesheet" href="index.css">
-  <link rel="icon" href="images/favicon.png">
-  <link href="https://fonts.googleapis.com/css?family=Barriecito&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <header class="floater">
+      <img class="jd" src="images/jd_logo.svg" alt="Junior Dev logo" />
 
-<body>
-  <header class="floater">
-    <img class="jd" src="images/jd_logo.svg" alt="Junior Dev logo">
+      <h1>
+        <span class="emoji">👻</span>
+        HacktoberFEST Halloween Graffiti
+        <span class="emoji">👻</span>
+      </h1>
 
-    <h1>
-      <span class="emoji">👻</span>
-      HacktoberFEST Halloween Graffiti
-      <span class="emoji">👻</span></h1>
+      <br />
+      <div><a href="#sites">Check out the sites</a> that have been created</div>
+      <br />
+      <span>-- OR --</span>
+      <br />
+      <div>
+        Learn <a href="#howto">how to add your own site</a> for everyone to see
+      </div>
+    </header>
 
-    <br />
-    <div>
-      <a href="#sites">Check out the sites</a> that have been created
+    <div class="floater" id="sites">
+      <h2>Sites</h2>
+      Check out the amazing sites below!
+
+      <div class="sites">
+        <a href="participants/james-formica/">James Formica</a>
+      </div>
     </div>
-    <br />
-    <span>-- OR --</span>
-    <br />
-    <div>
-      Learn <a href="#howto">how to add your own site</a> for everyone to see
-    </div>
-  </header>
 
-  <div class="floater" id="sites">
-    <h2>Sites</h2>
-    Check out the amazing sites below!
+    <div class="floater" id="howto">
+      <h2>How to contribute</h2>
 
-    <div class="sites">
-      <a href="james-formica.html">James Formica</a>
-    </div>
-  </div>
+      <p>
+        Want to add your own site? We'd love you to! Follow the instructions
+        below to make it happen. Feel free to ask for help at any point if you
+        are unsure of any of the steps. We are here to help!
+      </p>
 
-  <div class="floater" id="howto">
-    <h2>How to contribute</h2>
+      <h3>Step 1.</h3>
+      <p>
+        You will need to clone this repository (repo) so you can begin editing
+        the code. Head over to the
+        <a
+          href="https://github.com/juniordevio/hacktober-fest-halloween-graffiti"
+          >JuniorDev HacktoberFEST GitHub repo</a
+        >
+        and click the green "Clone or download" button to the right side of the
+        page. Once the url is copied, use your preferred way to clone the repo
+        locally. I will assume you are using terminal, in which case run a
+        command like follows:
+      </p>
+      <code
+        >git clone
+        https://github.com/juniordevio/hacktober-fest-halloween-graffiti.git</code
+      >
 
-    <p>
-      Want to add your own site? We'd love you to! Follow the instructions below to make it happen. Feel free to ask for
-      help at any point if you are unsure of any of the steps. We are here to help!
-    </p>
+      <h3>Step 2.</h3>
+      <p>
+        Once the repo is cloned, go into the folder by running a command like
+      </p>
 
-    <h3>Step 1.</h3>
-    <p>You will need to clone this repository (repo) so you can begin editing the code. Head over to the
-      <a href="https://github.com/juniordevio/hacktober-fest-halloween-graffiti">JuniorDev HacktoberFEST GitHub repo</a>
-      and click the green "Clone or download" button to the right side of the page. Once the url is copied, use your
-      preferred way to clone the repo locally. I will assume you are using terminal, in which case run a command like
-      follows:
-    </p>
-    <code>git clone https://github.com/juniordevio/hacktober-fest-halloween-graffiti.git</code>
+      <code>cd hacktober-fest-halloween-graffiti</code>
 
-    <h3>Step 2.</h3>
-    <p>Once the repo is cloned, go into the folder by running a command like</p>
+      <p>
+        Now that you are inside the repo you will need to create your own branch
+        to work on. This ensures your work and everyone elses work will be done
+        separately. First decide on your branch name, then type something like:
+      </p>
 
-    <code>cd hacktober-fest-halloween-graffiti</code>
+      <code>git checkout -b [your-branch-name]</code>
 
-    <p>Now that you are inside the repo you will need to create your own branch to work on. This ensures your work and
-      everyone elses work will be done separately. First decide on your branch name, then type something like:</p>
+      <p>Now you can begin your work in your IDE of choice...</p>
 
-    <code>git checkout -b [your-branch-name]</code>
+      <h3>Step 3.</h3>
+      <p>
+        To start building your own page, create an
+        <span class="mono">.html</span> new file with your name. It is best to
+        not use spaces and instead use a dash to separate any words. Once you've
+        created your file, paste in some basic HTML that will get you started,
+        perhaps something like:
+      </p>
 
-    <p>Now you can begin your work in your IDE of choice...</p>
-
-    <h3>Step 3.</h3>
-    <p>
-      To start building your own page, create an <span class="mono">.html</span> new file with your name. It is best to
-      not use
-      spaces and instead use a dash to separate any words. Once you've created your file, paste in some basic HTML that
-      will get you started, perhaps something like:
-    </p>
-
-    <pre>
+      <pre>
   &lt;!DOCTYPE html&gt;
   &lt;html lang="en"&gt;
   &lt;head&gt;
@@ -91,70 +108,70 @@
 
   &lt;/body&gt;
   &lt;/html&gt;
-</pre>
+</pre
+      >
 
-    <h3>Step 4.</h3>
-    <p>
-      Much like the previous step, create a <span class="mono">.css</span> file with your name. You can then link it in
-      your <span class="mono">.html</span> file inside the <span class="mono">&lt;head&gt;</span> element with something
-      like:
-    </p>
+      <h3>Step 4.</h3>
+      <p>
+        Much like the previous step, create a
+        <span class="mono">.css</span> file with your name. You can then link it
+        in your <span class="mono">.html</span> file inside the
+        <span class="mono">&lt;head&gt;</span> element with something like:
+      </p>
 
-    <code>
+      <code>
         &lt;link rel="stylesheet" href="[your-name].css"&gt;
-    </code>
+      </code>
 
-    <h3>Step 5.</h3>
-    <p>The rest is up to you, create until your completely out of ideas!</p>
+      <h3>Step 5.</h3>
+      <p>The rest is up to you, create until your completely out of ideas!</p>
 
-    <h3>Step 6.</h3>
-    <p>Once you've finished, it's time to publish it online.</p>
+      <h3>Step 6.</h3>
+      <p>Once you've finished, it's time to publish it online.</p>
 
-    <h3>Step 7.</h3>
-    <b>Create a PR</b>
+      <h3>Step 7.</h3>
+      <b>Create a PR</b>
 
-    <h3>Step 8.</h3>
-    <b>Merge when approved</b>
-  </div>
+      <h3>Step 8.</h3>
+      <b>Merge when approved</b>
+    </div>
 
-  <script type="text/javascript">
-    var emojis = ['👻', '🎃', '🕷']
+    <script type="text/javascript">
+      var emojis = ['👻', '🎃', '🕷'];
 
-    function animateFly(e) {
-      var x = e.pageX
-      var y = e.pageY
+      function animateFly(e) {
+        var x = e.pageX;
+        var y = e.pageY;
 
-      var _doc = document.documentElement
-      var emoji = emojis[Math.floor(Math.random() * emojis.length)]
-      var angle = Math.floor(Math.random() * 360)
+        var _doc = document.documentElement;
+        var emoji = emojis[Math.floor(Math.random() * emojis.length)];
+        var angle = Math.floor(Math.random() * 360);
 
-      var _span = document.createElement('span')
-      _span.classList.add('zoomy')
-      _span.style.top = y + 'px'
-      _span.style.left = x + 'px'
-      _span.innerText = emoji
-      _span = _doc.appendChild(_span)
-
-      function zoom() {
-        if (x < 0 || x > _doc.clientWidth || y < 0) {
-          _doc.removeChild(_span)
-          return
-        }
-
-        x += Math.sin(angle) * 10
-        y += Math.cos(angle) * 10
+        var _span = document.createElement('span');
+        _span.classList.add('zoomy');
         _span.style.top = y + 'px';
         _span.style.left = x + 'px';
+        _span.innerText = emoji;
+        _span = _doc.appendChild(_span);
 
-        window.requestAnimationFrame(zoom)
+        function zoom() {
+          if (x < 0 || x > _doc.clientWidth || y < 0) {
+            _doc.removeChild(_span);
+            return;
+          }
+
+          x += Math.sin(angle) * 10;
+          y += Math.cos(angle) * 10;
+          _span.style.top = y + 'px';
+          _span.style.left = x + 'px';
+
+          window.requestAnimationFrame(zoom);
+        }
+
+        window.requestAnimationFrame(zoom);
       }
 
-      window.requestAnimationFrame(zoom)
-    }
-
-    document.addEventListener('click', animateFly)
-  </script>
-
-</body>
-
+      document.addEventListener('click', animateFly);
+    </script>
+  </body>
 </html>
