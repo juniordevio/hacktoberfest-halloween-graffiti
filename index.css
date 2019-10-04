@@ -137,3 +137,8 @@ code {
   transform: translate(-50%, -50%);
 }
 
+.doc-image {
+  display: block;
+  max-width: 100%;
+  margin: 1rem 0;
+}
