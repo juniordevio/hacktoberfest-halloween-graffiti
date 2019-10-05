@@ -37,12 +37,17 @@
       <h2>Participants</h2>
       Check out the amazing sites by participants below!
 
-      <div class="sites participants">
+      <div class="sites participants" id="sites">
         <!-- ADD YOUR NEW PARTICIPANT PAGE HERE -->
         <a href="participants/james-formica/">James Formica</a>
         <a href="participants/faisal-akbar/">M Faisal Akbar</a>
         <a href="participants/eric-jiang.html">Eric Jiang</a>
         <a href="participants/david-bui/">David Bui</a>
+        <a href="participants/albert-sundjaja/">Albert Sundjaja</a>
+        <a href="participants/tom-osullivan/tom-osullivan.html"> Tommy O'Sullivan</a>
+        <a href="participants/antony-targett/antony-targett.html">Antony Targett</a>
+        <a href="participants/ioan-mercea/ioan-mercea.html">Ioan Mercea</a>
+        <a href="participants/robin-klaus/index.html">Robin Klaus Dunbar</a>
       </div>
     </div>
 
@@ -172,7 +177,7 @@
     </div>
 
     <script type="text/javascript">
-      var emojis = ['👻', '🎃', '🕷'];
+      var emojis = ['👻', '🎃', '🕷', '🌘', '🧙‍♀️', '🧙🏼‍♂️', '🧟‍♂️', '🧟‍♀️', ''];
 
       function animateFly(e) {
         var x = e.pageX;
@@ -181,6 +186,7 @@
         var _doc = document.documentElement;
         var emoji = emojis[Math.floor(Math.random() * emojis.length)];
         var angle = Math.floor(Math.random() * 360);
+        var pageHeight = _doc.scrollHeight;
 
         var _span = document.createElement('span');
         _span.classList.add('zoomy');
@@ -190,7 +196,7 @@
         _span = _doc.appendChild(_span);
 
         function zoom() {
-          if (x < 0 || x > _doc.clientWidth || y < 0) {
+          if (x < 0 || x > _doc.clientWidth || y < 0 || y > pageHeight) {
             _doc.removeChild(_span);
             return;
           }
@@ -207,6 +213,22 @@
       }
 
       document.addEventListener('click', animateFly);
+
+
+      // SPoopy names section
+      var _sites = document.getElementById('sites')
+
+      function spoopyNames() {
+        var _peoples = _sites.querySelectorAll('a')
+
+        for (var i = 0; i < _peoples.length; i ++) {
+          var emoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+          _peoples[i].innerText = emoji + _peoples[i].innerText;
+        }
+      }
+
+      spoopyNames()
     </script>
   </body>
 </html>
