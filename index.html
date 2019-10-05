@@ -37,7 +37,7 @@
       <h2>Participants</h2>
       Check out the amazing sites by participants below!
 
-      <div class="sites participants">
+      <div class="sites participants" id="sites">
         <!-- ADD YOUR NEW PARTICIPANT PAGE HERE -->
         <a href="participants/james-formica/">James Formica</a>
         <a href="participants/faisal-akbar/">M Faisal Akbar</a>
@@ -174,7 +174,7 @@
     </div>
 
     <script type="text/javascript">
-      var emojis = ['👻', '🎃', '🕷'];
+      var emojis = ['👻', '🎃', '🕷', '🌘', '🧙‍♀️', '🧙🏼‍♂️', '🧟‍♂️', '🧟‍♀️', ''];
 
       function animateFly(e) {
         var x = e.pageX;
@@ -210,6 +210,22 @@
       }
 
       document.addEventListener('click', animateFly);
+
+
+      // SPoopy names section
+      var _sites = document.getElementById('sites')
+
+      function spoopyNames() {
+        var _peoples = _sites.querySelectorAll('a')
+
+        for (var i = 0; i < _peoples.length; i ++) {
+          var emoji = emojis[Math.floor(Math.random() * emojis.length)];
+
+          _peoples[i].innerText = emoji + _peoples[i].innerText;
+        }
+      }
+
+      spoopyNames()
     </script>
   </body>
 </html>
