@@ -2,12 +2,13 @@ body {
   margin: 10px;
   display: flex;
   justify-content: center;
+  background-image: url(./images/as-spooky.jpg);
 }
 
 .participant {
   display: flex;
+  color: white;
   flex-direction: column;
-  background-color: rgb(243, 172, 78);
   border-radius: 5px;
   justify-content: space-between;
 }
@@ -17,7 +18,7 @@ body {
 }
 
 .participant__image > img {
-  height: 500px;
-  width: 500px;
-  border: 1px solid burlywood;
+  height: 400px;
+  width: 400px;
+  border: 2px solid black;
 }
