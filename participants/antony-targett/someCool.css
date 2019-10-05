@@ -2,3 +2,22 @@
     background:gray;
     cursor:url("./something.png"), auto;
   }
+.imgHover{
+    height:200px;
+    width: 200px;
+    display: block;
+    background-image: url("giphy.gif")
+}
+.imgHover:hover{
+    background-image: url("./scary.gif");
+}
+
+.pandaHover{
+    height:200px;
+    width: 200px;
+    display: block;
+    background-image: url("panda.gif") 
+}
+.pandaHover:hover{
+    background-image: url("./scary.gif");
+}
