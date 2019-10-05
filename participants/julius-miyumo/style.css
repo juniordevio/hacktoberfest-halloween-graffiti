@@ -1,0 +1,9 @@
+.container {
+    justify-content: center;
+    margin: 10px;
+    background-color: #B2F7C5;
+}
+
+body {
+    background: grey;
+}
