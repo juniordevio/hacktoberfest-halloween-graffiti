@@ -1,0 +1,31 @@
+body {
+    background: rgb(238,174,202);
+    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    color: white;
+    font-family: 'Be Vietnam', sans-serif;
+}
+
+h1 {
+    font-size: 90px;
+    margin: 0;
+}
+
+h2 {
+    font-size: 30px;
+    margin: 0;
+}
+
+.text {
+    text-align: center;
+    padding: 35vh;
+}
+
+a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: gray;
+}
