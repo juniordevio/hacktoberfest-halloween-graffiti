@@ -1,6 +1,37 @@
 body {
-
+  font-family: Charcoal, sans-serif;
+  font-weight:lighter;
   background-image:url('images/buffy_halloweed.png');
   background-repeat: no-repeat;
   background-size: 100%;
+
+}
+
+h1,h2,h3,h4,p{
+  color:white;
+}
+
+a {
+  text-decoration: none;
+}
+a:visited {
+  text-decoration: none;
+  color:orange;
+}
+
+div#main{
+  text-align:center;
+  display:inline-block;
+  /* background-color: red; */
+  min-height: 100vh;
+  width:100%;
+  padding-top:50px;
+  margin: 0 auto;
+}
+div#focus{
+  text-align:center;
+  display:inline-block;
+  background: rgba(0, 0, 0, 0.3);
+  padding:30px;
+  margin: 0 auto;
 }
