@@ -1,0 +1,23 @@
+body {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.participant {
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(243, 172, 78);
+  border-radius: 5px;
+  justify-content: space-between;
+}
+
+.participant__information {
+  align-items: center;
+}
+
+.participant__image > img {
+  height: 500px;
+  width: 500px;
+  border: 1px solid burlywood;
+}
