@@ -180,6 +180,7 @@
         var _doc = document.documentElement;
         var emoji = emojis[Math.floor(Math.random() * emojis.length)];
         var angle = Math.floor(Math.random() * 360);
+        var pageHeight = _doc.scrollHeight;
 
         var _span = document.createElement('span');
         _span.classList.add('zoomy');
@@ -189,7 +190,7 @@
         _span = _doc.appendChild(_span);
 
         function zoom() {
-          if (x < 0 || x > _doc.clientWidth || y < 0) {
+          if (x < 0 || x > _doc.clientWidth || y < 0 || y > pageHeight) {
             _doc.removeChild(_span);
             return;
           }
