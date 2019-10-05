@@ -1,0 +1,17 @@
+body {
+    background: black;
+    color: white
+}
+
+header {
+    color: white;
+}
+
+.hacktober_title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 4em;
+}
+
+.hacktober_content {
+    font-size: 3em;
+}
