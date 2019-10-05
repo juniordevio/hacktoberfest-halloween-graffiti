@@ -185,7 +185,7 @@
         var y = e.pageY;
 
         var _doc = document.documentElement;
-        var emoji = emojis[Math.floor(Math.random() * emojis.length)];
+        var emoji = emojis[Math.floor(Math.random() * emojis.length - 1)];
         var angle = Math.floor(Math.random() * 360);
         var pageHeight = _doc.scrollHeight;
 
@@ -223,7 +223,7 @@
         var _peoples = _sites.querySelectorAll('a')
 
         for (var i = 0; i < _peoples.length; i ++) {
-          var emoji = emojis[Math.floor(Math.random() * emojis.length)];
+          var emoji = emojis[Math.floor(Math.random() * emojis.length - 1)];
 
           _peoples[i].innerText = emoji + _peoples[i].innerText;
         }
