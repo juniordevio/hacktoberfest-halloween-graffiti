@@ -1,23 +1,26 @@
 body {
-    background: rgb(238,174,202);
-    background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    background: rgb(226,84,58);
+    background: linear-gradient(90deg, rgba(226,84,58,1) 30%, rgba(231,166,74,1) 100%);
     color: white;
     font-family: 'Be Vietnam', sans-serif;
 }
 
 h1 {
     font-size: 90px;
+    font-weight: 700;
     margin: 0;
+    font-family: sans-serif;
 }
 
 h2 {
     font-size: 30px;
+    font-weight: 300;
     margin: 0;
 }
 
 .text {
     text-align: center;
-    padding: 35vh;
+    padding: 35vh 0;
 }
 
 a {
