@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Sundeep Chand</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="hello"></h1>
+        <h2 id="intro"></h2>
+
+        <div id="button" class="link" onclick="openInNewTab('http://sundeepsportfolio.000webhostapp.com/')">
+            <p>Wanna know more about me?</p>
+        </div>
+    </div>
+
+
+    <script>
+        const greetText = "Hello World!"
+        const introText = "I am Sundeep Chand, a student from India."
+
+        const greetInterval = 80
+        const introInterval = 30
+
+        for (let i = 0; i < greetText.length; i++)
+        {
+            setTimeout(() => {
+                const helloLabel = document.getElementById('hello')
+                helloLabel.textContent += greetText.charAt(i)
+            }, greetInterval * i)
+        }
+
+        for (let i = 0; i < introText.length; i++)
+        {
+            setTimeout(() => {
+                const introLabel = document.getElementById('intro')
+                introLabel.textContent += introText.charAt(i)
+            }, introInterval * i + greetInterval * greetText.length)
+        }
+
+        // Set the button visible
+        setTimeout(() => {
+            const button = document.getElementById('button')
+            button.style.opacity = 1;
+        }, greetInterval * greetText.length + introInterval * introText.length + 20)
+
+        // Function to open my portfolio.
+        const openInNewTab = (url) => {
+            var win = window.open(url, '_blank');
+            win.focus();
+        }
+    </script>
+</body>
+</html>
