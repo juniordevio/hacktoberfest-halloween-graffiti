@@ -215,42 +215,55 @@
 
     <script type="text/javascript">
       var emojis = ["👻", "🎃", "🕷", "🦇", "🌘", "🧙‍♀️", "🧙🏼‍♂️", "🧟‍♂️", "🧟‍♀️", "☠️"];
+      
       function animateFly(e) {
         var x = e.pageX;
         var y = e.pageY;
+        
         var _doc = document.documentElement;
         var emoji = emojis[Math.floor(Math.random() * emojis.length)];
         var angle = Math.floor(Math.random() * 360);
         var pageHeight = _doc.scrollHeight;
+        
         var _span = document.createElement("span");
         _span.classList.add("zoomy");
         _span.style.top = y + "px";
         _span.style.left = x + "px";
         _span.innerText = emoji;
         _span = _doc.appendChild(_span);
+        
         function zoom() {
           if (x < 0 || x > _doc.clientWidth || y < 0 || y > pageHeight) {
             _doc.removeChild(_span);
             return;
           }
+          
           x += Math.sin(angle) * 10;
           y += Math.cos(angle) * 10;
           _span.style.top = y + "px";
           _span.style.left = x + "px";
+          
           window.requestAnimationFrame(zoom);
         }
+        
         window.requestAnimationFrame(zoom);
       }
+      
       document.addEventListener("click", animateFly);
+      
       // SPoopy names section
       var _sites = document.getElementById("sites");
+      
       function spoopyNames() {
         var _peoples = _sites.querySelectorAll("a");
+        
         for (var i = 0; i < _peoples.length; i++) {
           var emoji = emojis[Math.floor(Math.random() * emojis.length)];
+          
           _peoples[i].innerText = emoji + _peoples[i].innerText;
         }
       }
+      
       spoopyNames();
     </script>
   </body>
