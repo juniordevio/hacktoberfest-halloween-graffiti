@@ -105,14 +105,14 @@ table {
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
     border-bottom: 50vh solid transparent;
-    border-top: 50vh solid purple;
+    border-top: 50vh solid #1b7ff2;
 }
 
 .main__overlay-right {
     height: 0;
     width: 0;
     border-left: 50vw solid transparent;
-    border-right: 50vw solid orange;
+    border-right: 50vw solid #f26d1b;
     border-bottom: 50vh solid transparent;
     border-top: 50vh solid transparent;
 }
@@ -122,14 +122,14 @@ table {
     width: 0;
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
-    border-bottom: 50vh solid purple;
+    border-bottom: 50vh solid #f2d91b;
     border-top: 50vh solid transparent;
 }
 
 .main__overlay-left {
     height: 0;
     width: 0;
-    border-left: 50vw solid orange;
+    border-left: 50vw solid #c01bf2;
     border-right: 50vw solid transparent;
     border-bottom: 50vh solid transparent;
     border-top: 50vh solid transparent;
