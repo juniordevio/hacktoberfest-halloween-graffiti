@@ -1,0 +1,10 @@
+
+h1 {
+    text-align: center;
+    font-family: 'Creepster', cursive;
+    font-size: 3em;
+}
+body {
+    background-image: linear-gradient(to right top, #d5e80d, #e3c700, #eba500, #ed8200, #e95d00, #d64315, #c1271e, #aa0022, #800825, #560f20, #2e0f17, #000000);
+    
+}
