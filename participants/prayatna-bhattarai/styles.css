@@ -1,0 +1,28 @@
+body {
+    background: #392f2d;
+    color: white;
+}
+
+.title {
+    font-size: 3em;
+    color: #8a0303;
+    text-align: center;
+    font-family: 'Sancreek', cursive;
+}
+
+img {
+    height: 300px;
+    width: 300px;
+}
+
+.align {
+ text-align: center;
+}
+
+span {
+    font-size: 0.5em;
+}
+
+.hide-text {
+    color:#392f2d;
+}
