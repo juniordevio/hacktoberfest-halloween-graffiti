@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Halloween";
+    src: url("Scary\ Halloween\ Font.ttf");
+}
+
+html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Halloween";
+    font-size: 4em;
+    text-shadow: 0 5px 10px black;
+    color: white;
+    text-align: center;
+
+    background: url("tree.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 45%;
+}
