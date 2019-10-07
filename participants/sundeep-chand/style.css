@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+.container{
+    width: 60vw;
+    height: 300px;
+    padding-top: 130px;
+    text-align: center;
+    position: absolute;
+    left: 20vw;
+    top: 80px;
+    border: 10px solid rgb(10, 10, 10);
+    border-radius: 10px;
+}
+
+.link{
+    border: 3px solid gray;
+    border-radius: 10px;
+    width: 30vw;
+    height: 40px;
+    position: absolute;
+    left: 12vw;
+    margin: 40px;
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+.link > p{
+    position: relative;
+    top: 10px;
+}
+
+.link :hover{
+    cursor: pointer;
+}
