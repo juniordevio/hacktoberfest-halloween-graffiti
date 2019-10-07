@@ -1,51 +1,8 @@
-/* CSS Reset */
-/* http://meyerweb.com/eric/tools/css/reset/
-v2.0 | 20110126
-License: none (public domain)
-*/
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html, body {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-    display: block;
-}
-body {
-    line-height: 1;
-}
-ol, ul {
-    list-style: none;
-}
-blockquote, q {
-    quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-    content: '';
-    content: none;
-}
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
 }
 
 *, input, :before, :after {
@@ -53,8 +10,9 @@ table {
     box-sizing: border-box;
 }
 
-
-/* Actual styles */
+body {
+    font-family: Roboto, sans-serif;
+}
 
 .main {
     position: relative;
@@ -67,6 +25,11 @@ table {
     margin: auto;
 }
 
+.section__body {
+    text-align: center;
+    color: white;
+}
+
 .main__overlay {
     position: absolute;
     top: 0;
@@ -75,23 +38,7 @@ table {
     left: 0;
 }
 
-.main__overlay:hover .main__overlay-top {
-    transform: translate(-100vw, 0);
-}
-
-.main__overlay:hover .main__overlay-right {
-    transform: translate(0, -100vh);
-}
-
-.main__overlay:hover .main__overlay-bottom {
-    transform: translate(100vw, 0);
-}
-
-.main__overlay:hover .main__overlay-left {
-    transform: translate(0, 100vh);
-}
-
-.abs-pos {
+.main__overlay-side {
     position: absolute;
     top: 0;
     right: 0;
@@ -99,42 +46,74 @@ table {
     left: 0;
 }
 
-.main__overlay-top {
+.main__overlay-side--top {
+    animation: slide-left 1.2s infinite alternate ease;
+}
+
+.main__overlay-side--right {
+    animation: slide-up 1.2s infinite alternate ease;
+}
+
+.main__overlay-side--bottom {
+    animation: slide-right 1.2s infinite alternate ease;
+}
+
+.main__overlay-side--left {
+    animation: slide-down 1.2s infinite alternate ease;
+}
+
+.main__overlay-side--top {
     height: 0;
     width: 0;
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
     border-bottom: 50vh solid transparent;
-    border-top: 50vh solid #1b7ff2;
+    border-top: 50vh solid #ffd188;
 }
 
-.main__overlay-right {
+.main__overlay-side--right {
     height: 0;
     width: 0;
     border-left: 50vw solid transparent;
-    border-right: 50vw solid #f26d1b;
+    border-right: 50vw solid #fa5c00;
     border-bottom: 50vh solid transparent;
     border-top: 50vh solid transparent;
 }
 
-.main__overlay-bottom {
+.main__overlay-side--bottom {
     height: 0;
     width: 0;
     border-left: 50vw solid transparent;
     border-right: 50vw solid transparent;
-    border-bottom: 50vh solid #f2d91b;
+    border-bottom: 50vh solid #ffd188;
     border-top: 50vh solid transparent;
 }
 
-.main__overlay-left {
+.main__overlay-side--left {
     height: 0;
     width: 0;
-    border-left: 50vw solid #c01bf2;
+    border-left: 50vw solid #fa5c00;
     border-right: 50vw solid transparent;
     border-bottom: 50vh solid transparent;
     border-top: 50vh solid transparent;
 }
 
-.animate {
-    transition: transform 1.5s ease;
+@keyframes slide-up {
+    0%   { transform: translateY(0vh) }
+    100%   { transform: translateY(-100vh) }
+}
+
+@keyframes slide-left {
+    0%   { transform: translateX(0vh) }
+    100%   { transform: translateX(-100vw) }
+}
+
+@keyframes slide-down {
+    0%   { transform: translateY(0vh) }
+    100%   { transform: translateY(100vh) }
+}
+
+@keyframes slide-right {
+    0%   { transform: translateX(0vh) }
+    100%   { transform: translateX(100vw) }
 }
