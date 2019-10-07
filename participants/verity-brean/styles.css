@@ -1,0 +1,28 @@
+* {
+    background-color: #000000;
+    color: orange;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+img {
+    max-width: 400px;
+    animation: boo 3s infinite;
+}
+
+@keyframes boo {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(100px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  

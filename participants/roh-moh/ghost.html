@@ -1,0 +1,158 @@
+
+<html>
+<div id="ghost">
+  <div id="head">
+    <div id="eye-left"></div>
+    <div id="eye-right"></div>
+    
+  </div>
+  <div id="mouth"></div>
+  <div id="arm-left"></div>
+  <div id="arm-right"></div>
+  <div id="body">
+  </div>
+  <div id="tri-1"></div>
+  <div id="tri-2"></div>
+  <div id="tri-3"></div>
+  <div id="tri-4"></div>
+  <div id="tri-5"></div>
+</div>
+<style>
+body{
+  margin:0px;
+  height:100vh;
+}
+
+div {
+  position: absolute;
+}
+
+div#ghost {
+  top:calc(50% - 100px);
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  border-bottom: 10px solid #444;
+  position: relative;
+  border-radius: 10px;
+  background-color: #c52626;
+  -webkit-perspective: 150px;
+  perspective: 150px;
+}
+
+#head {
+  background-color: #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 10px;
+  left: 100px;
+}
+
+#mouth{
+  width:0;
+  height:0;
+  border-left: 15px solid black;
+  border-right: 15px solid transparent;
+  border-radius: 50%;
+  border-top: 15px solid black;
+  border-bottom: 15px solid transparent;
+  transform:rotate(-135deg);
+  top:50px;
+  left:135px;
+  z-index:1;
+}
+
+#arm-left {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 12px solid transparent;
+  top: 62px;
+  left: 82px;
+  border-top: 15px solid #fff;
+  transform: scaleX(-1) rotate(-10deg);
+  border-radius: 100%;
+  background-color: white;
+}
+
+#arm-right {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 12px solid transparent;
+  top: 62px;
+  left: 184px;
+  transform: rotate(-10deg);
+  border-top: 15px solid #fff;
+  border-radius: 100%;
+  background-color: white;
+}
+
+#body {
+  background-color: #fff;
+  width: 110px;
+  height: 100px;
+  top: 60px;
+  left: 95px;
+  transform: rotateX(15deg)
+}
+
+#eye-left {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  top: 30px;
+  left: 25px;
+}
+
+#eye-right {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: black;
+  top: 30px;
+  left: 65px;
+}
+
+#tri-1,
+#tri-2,
+#tri-3,
+#tri-4,
+#tri-5 {
+  width: 0;
+  height: 0;
+  border-left: 15px solid white;
+  border-right: 15px solid white;
+  border-radius: 12px;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+}
+
+#tri-1 {
+  top: 148px;
+  left: 90px;
+}
+
+#tri-2 {
+  top: 148px;
+  left: 113px;
+}
+
+#tri-3 {
+  top: 148px;
+  left: 136px;
+}
+
+#tri-4 {
+  top: 148px;
+  left: 158px;
+}
+
+#tri-5 {
+  top: 148px;
+  left: 180px;
+}
+</style>
+</html>
