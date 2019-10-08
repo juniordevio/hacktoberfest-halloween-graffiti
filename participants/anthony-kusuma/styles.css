@@ -1,0 +1,51 @@
+/*
+Anthony was here
+Hacktoberfest 2019
+*/
+body {
+    background-color: #333;
+    background-image: url('bg-img.gif');
+    background-repeat: repeat;
+    font-family: 'Mansalva', cursive;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2em;
+    text-align: center;
+}
+
+h1 {
+    color:#fff;
+    text-shadow: 4px 4px #FF7F00;
+    font-weight: 600;
+}
+
+.img-cat {
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+.img-cat:hover {
+    opacity: .8;
+    transition: opacity .5s ease-out;
+}
+
+.icon-container {
+    margin: 2em 0;
+    padding: 2em;
+    background: #fff;
+    box-shadow: 10px 10px #FF7F00;
+    border-radius: 5px;
+}
+
+.icon-container a{
+    color: #333;
+    margin: 0 1em;
+}
+
+.icon-container a:hover{
+    color: #FF7F00;
+    transition: .2s ease-out;
+}

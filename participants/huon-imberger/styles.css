@@ -1,0 +1,119 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+}
+
+*, input, :before, :after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+.main {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    background: black;
+}
+
+.section {
+    margin: auto;
+}
+
+.section__body {
+    text-align: center;
+    color: white;
+}
+
+.main__overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.main__overlay-side {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.main__overlay-side--top {
+    animation: slide-left 1.2s infinite alternate ease;
+}
+
+.main__overlay-side--right {
+    animation: slide-up 1.2s infinite alternate ease;
+}
+
+.main__overlay-side--bottom {
+    animation: slide-right 1.2s infinite alternate ease;
+}
+
+.main__overlay-side--left {
+    animation: slide-down 1.2s infinite alternate ease;
+}
+
+.main__overlay-side--top {
+    height: 0;
+    width: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-bottom: 50vh solid transparent;
+    border-top: 50vh solid #ffd188;
+}
+
+.main__overlay-side--right {
+    height: 0;
+    width: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid #fa5c00;
+    border-bottom: 50vh solid transparent;
+    border-top: 50vh solid transparent;
+}
+
+.main__overlay-side--bottom {
+    height: 0;
+    width: 0;
+    border-left: 50vw solid transparent;
+    border-right: 50vw solid transparent;
+    border-bottom: 50vh solid #ffd188;
+    border-top: 50vh solid transparent;
+}
+
+.main__overlay-side--left {
+    height: 0;
+    width: 0;
+    border-left: 50vw solid #fa5c00;
+    border-right: 50vw solid transparent;
+    border-bottom: 50vh solid transparent;
+    border-top: 50vh solid transparent;
+}
+
+@keyframes slide-up {
+    0%   { transform: translateY(0vh) }
+    100%   { transform: translateY(-100vh) }
+}
+
+@keyframes slide-left {
+    0%   { transform: translateX(0vh) }
+    100%   { transform: translateX(-100vw) }
+}
+
+@keyframes slide-down {
+    0%   { transform: translateY(0vh) }
+    100%   { transform: translateY(100vh) }
+}
+
+@keyframes slide-right {
+    0%   { transform: translateX(0vh) }
+    100%   { transform: translateX(100vw) }
+}
