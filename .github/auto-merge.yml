@@ -1,2 +1,3 @@
 minApprovals:
   COLLABORATOR: 1
+mergeMethod: squash
