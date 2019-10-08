@@ -22,6 +22,10 @@ body {
   box-shadow: 10px 10px 0px black;
 }
 
+.floater.center {
+  text-align: center;
+}
+
 .jd {
   padding: 10px;
   border-radius: 10px;
@@ -39,10 +43,6 @@ h1,
 h2,
 h3 {
   font-family: "Barriecito", cursive;
-}
-
-h1 {
-  text-align: center;
 }
 
 h2 {
@@ -96,7 +96,12 @@ p {
 
 .sites > a {
   display: block;
-  line-height: 1.5;
+  line-height: 2;
+  transform-origin: 50%;
+}
+
+.sites > a:hover {
+  animation: wobble 0.2s infinite linear;
 }
 
 code,
@@ -120,6 +125,30 @@ code {
   font-weight: bold;
 }
 
+.zoomy {
+  position: absolute;
+  font-size: 2rem;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+}
+
+.doc-image {
+  display: block;
+  max-width: 100%;
+  margin: 1rem 0;
+}
+
+@media (max-width: 36rem) {
+  .sites {
+    column-count: 1;
+  }
+
+  .emoji {
+    display: block;
+    margin: 0 !important;
+  }
+}
+
 @keyframes shake {
   0%,
   100% {
@@ -135,15 +164,17 @@ code {
   }
 }
 
-.zoomy {
-  position: absolute;
-  font-size: 2rem;
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-}
+@keyframes wobble {
+  0%,
+  100% {
+    transform: rotate(0deg) translateX(0);
+  }
 
-.doc-image {
-  display: block;
-  max-width: 100%;
-  margin: 1rem 0;
+  33% {
+    transform: rotate(5deg) translateX(-1px);
+  }
+
+  66% {
+    transform: rotate(-5deg) translateX(2px);
+  }
 }
