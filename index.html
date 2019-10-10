@@ -33,10 +33,12 @@
       </div>
     </header>
 
-    <div class="floater center" id="sites">
+    <div class="floater center">
       <h2>Participants</h2>
       Check out the amazing sites by participants below!
-
+      <br />
+      <br />
+      <a href="javascript:gotoRandomParticipant()">🔀 Random participant! 🔀</a>
       <div class="sites participants" id="sites">
         <a target="_blank" href="participants/aaron-gaddes/">Aaron Gaddes</a>
         <a target="_blank" href="participants/aimee-tacchi/">Aimee Tacchi</a>
@@ -291,6 +293,38 @@
         }
       }
 
+      function gotoRandomParticipant() {
+        var people = _sites.querySelectorAll("a");
+        var person = people[Math.floor(Math.random()*people.length)];
+        person.click();
+      }
+
+      // https://stackoverflow.com/a/12646864
+      function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var temp = array[i];
+          array[i] = array[j];
+          array[j] = temp;
+        }
+      }
+
+      function shufflePeople() {
+        var people = [..._sites.querySelectorAll("a")];
+
+        // remove all a tags
+        for (let person of people) {
+          person.remove();
+        }
+
+        // shuffle and reinsert
+        shuffleArray(people);
+        for (let person of people) {
+          _sites.appendChild(person);
+        }
+      }
+
+      shufflePeople();
       spoopyNames();
     </script>
   </body>
