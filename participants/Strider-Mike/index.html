@@ -37,11 +37,12 @@
                     <label for="guess">Enter you guess between 0 and 500:</label>
                     <input type="text" id="guess" value="0" />
                     <input type="button" onclick="yourGuess()" value="submit" /><br /><br />
-                    Give Up and Show Answer <input id="cheat" type="checkbox" onclick="showNumberToGuess()" /><br /><br />
+                    Give Up and Show Answer <input id="cheat" type="checkbox" onclick="ShowAnswer()" /><br /><br />
                     <div id="cheatShow" style="display: none;">
                         <input id="numberToGuess" type="text" /><br /><br />
                     </div>
-                    <textarea id="output" readonly name="output" rows="5" style="width: 75%;"></textarea>
+                    <textarea id="output" readonly name="output" rows="5" style="width: 75%;"></textarea><br /><br />
+                    Please refresh the game to start over.
                 </div>
             </td>
         </tr>
@@ -49,21 +50,21 @@
 
     <script>
         function yourGuess() {
-            guess = document.getElementById("guess").value;
-            guesses = document.getElementById("output");
+            txtguess = document.getElementById("guess").value;
+            txtResults = document.getElementById("output");
 
-            if (guess == numToGuess) {
-                guesses.value = guesses.value + "\rWinner !! You have guessed correctly!  The ghost is shocked and floats away.";
-            } else if (guess > numToGuess) {
-                guesses.value = guesses.value + "\rYou guessing too high!";
+            if (txtguess == numToGuess) {
+                txtResults.value = txtResults.value + "\rWinner !! You have guessed correctly!  The ghost is shocked and floats away.";
+            } else if (txtguess > numToGuess) {
+                txtResults.value = txtResults.value + "\rYou guessing too high!";
             } else {
-                guesses.value = guesses.value + "\rYou guessing too low!";
+                txtResults.value = txtResults.value + "\rYou guessing too low!";
             }
             var textarea = document.getElementById('output');
             textarea.scrollTop = textarea.scrollHeight;
         }
 
-        function showNumberToGuess() {
+        function ShowAnswer() {
             if (document.getElementById('cheat').checked) {
                 document.getElementById('numberToGuess').value = numToGuess;
                 document.getElementById('cheatShow').style.display = 'inline';
