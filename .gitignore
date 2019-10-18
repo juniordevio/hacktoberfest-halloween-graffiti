@@ -2,3 +2,7 @@
 dist
 .DS_Store
 participants/.DS_Store
+.vs/config/applicationhost.config
+.vs/hacktoberfest-halloween-graffiti/v15/.suo
+.vs/slnx.sqlite
+.vs/VSWorkspaceState.json
