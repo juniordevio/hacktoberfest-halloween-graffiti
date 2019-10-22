@@ -1,0 +1,20 @@
+
+body {
+  text-align: center;
+  background-image: url(https://cdn.magdeleine.co/wp-content/uploads/2018/09/autumn-dhyamis-kleber-fall-632078-1400x788.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;   
+}
+
+h1{
+  font-size: 100px;
+  color: red;
+}
+
+h2{
+  font-size: 28px;
+  font-family: 'Roboto', sans-serif;
+  color: orangered;
+}
+

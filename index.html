@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -33,11 +33,14 @@
       </div>
     </header>
 
-    <div class="floater center" id="sites">
+    <div class="floater center">
       <h2>Participants</h2>
       Check out the amazing sites by participants below!
-
+      <br />
+      <br />
+      <a href="javascript:gotoRandomParticipant()">🔀 Random participant! 🔀</a>
       <div class="sites participants" id="sites">
+        <a target="_blank" href="participants/eddie-fisher/">Eddie Fisher</a>
         <a target="_blank" href="participants/aaron-gaddes/">Aaron Gaddes</a>
         <a target="_blank" href="participants/aimee-tacchi/">Aimee Tacchi</a>
         <a target="_blank" href="participants/albert-sundjaja/">Albert Sundjaja</a>
@@ -78,6 +81,7 @@
         <a target="_blank" href="participants/priyanka/">Priyanka</a>
         <a target="_blank" href="participants/robin-klaus/">Robin Klaus Dunbar</a>
         <a target="_blank" href="participants/roh-moh/">Roh Moh</a>
+	<a target="_blank" href="participants/sabhya-grover/">Sabhya</a>
         <a target="_blank" href="participants/samuel-wee/">Samuel Wee</a>
         <a target="_blank" href="participants/shuying-lin/">Shuying Lin</a>
         <a target="_blank" href="participants/stephen-beattie/">Stephen Beattie</a>
@@ -90,6 +94,11 @@
         <a target="_blank" href="participants/piyush-jha/">Piyush jha</a>
         <a target="_blank" href="participants/naveen-bassi/">Naveen Bassi</a>
         <a target="_blank" href="participants/makitsune/">Makitsune</a>
+        <a target="_blank" href="participants/zara-otamias/">Zara Otamias</a>
+        <a target="_blank" href="participants/xaca-rana/">Xaca Rana</a>
+        <a target="_blank" href="participants/lucas-phang/">Lucas Phang</a>
+        <a target="_blank" href="participants/derick-falk/">Derick Falk</a>
+        <a target="_blank" href="participants/Strider-Mike/">Mike Strider</a>
       </div>
     </div>
 
@@ -291,6 +300,38 @@
         }
       }
 
+      function gotoRandomParticipant() {
+        var people = _sites.querySelectorAll("a");
+        var person = people[Math.floor(Math.random()*people.length)];
+        person.click();
+      }
+
+      // https://stackoverflow.com/a/12646864
+      function shuffleArray(array) {
+        for (var i = array.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var temp = array[i];
+          array[i] = array[j];
+          array[j] = temp;
+        }
+      }
+
+      function shufflePeople() {
+        var people = [..._sites.querySelectorAll("a")];
+
+        // remove all a tags
+        for (let person of people) {
+          person.remove();
+        }
+
+        // shuffle and reinsert
+        shuffleArray(people);
+        for (let person of people) {
+          _sites.appendChild(person);
+        }
+      }
+
+      shufflePeople();
       spoopyNames();
     </script>
   </body>

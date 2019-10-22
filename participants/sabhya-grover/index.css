@@ -1,0 +1,11 @@
+.box-1{
+	background-color:#333;
+	color:#fff;
+	border:5px red solid;
+	border-width:3px;
+	padding:20px;
+}
+.ig{
+	width:500px;
+	height:600px;
+}
