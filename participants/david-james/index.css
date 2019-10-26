@@ -1,0 +1,161 @@
+body {
+  background: radial-gradient(#121212, #000);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.scene {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.not-so-secret-invaders {
+  position: absolute;
+  z-index: 10;
+}
+
+.world {
+  display: inline-block;
+  background-color: rgba(100,100, 100, 0.1);
+  border-radius: 50%;
+}
+
+.s-invader-1 {
+  animation: space-invade 7.5s linear infinite;
+  font-size: 50px;
+  position: relative;
+  top: -100px;
+}
+
+.s-invader-2 {
+  animation: space-invade 5.5s linear infinite;
+  font-size: 40px;
+  position: relative;
+  top: -200px;
+}
+
+.s-invader-3 {
+  animation: space-invade 5s linear infinite;
+  font-size: 30px;
+  position: relative;
+  top: -280px;
+}
+
+.s-invader-4 {
+  animation: space-invade 4.5s linear infinite;
+  font-size: 20px;
+  position: relative;
+  top: -380px;
+}
+
+.s-invader-5 {
+  animation: space-invade 4s linear infinite;
+  font-size: 10px;
+  position: relative;
+  top: -480px;
+}
+
+.ufo-1 {
+  animation: space-travel-1 4s linear infinite;
+  font-size: 40px;
+  opacity: 0.8;
+}
+
+.ufo-2 {
+  animation: space-travel-3 9s linear infinite;
+  font-size: 70px;
+  position: absolute;
+  top: 280px;
+  opacity: 0.8;
+}
+
+.ufo-3 {
+  animation: space-travel-3 12s infinite;
+  font-size: 40px;
+  position: absolute;
+  top: -280px;
+  opacity: 0.6;
+}
+
+.satelite {
+  animation: satelite 10s linear infinite;
+  font-size: 25px;
+  margin: -40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.invader-4 {
+  animation: space-invade 4s linear infinite;
+  font-size: 40px;
+  position: relative;
+  top: -20px;
+}
+
+@keyframes space-invade {
+  0% {
+    transform: translateX(-200px);
+  }
+
+  50% {
+    transform: translateX(200px);
+  }
+
+  100% {
+    transform: translateX(-200px);
+  }
+}
+
+@keyframes space-travel-1 {
+  0% {
+    transform: translate(-110vw, 0);
+  }
+
+  50% {
+    transform: translate(110vw, 100vh);
+  }
+
+  100% {
+    transform: translate(-110vw, 0);
+  }
+}
+
+@keyframes space-travel-3 {
+  0% {
+    transform: translateX(-110vw);
+  }
+
+  100% {
+    transform: translateX(180vw);
+  }
+}
+
+@keyframes space-travel-2 {
+  0% {
+    transform: translate(-110vw, 0);
+  }
+
+  50% {
+    transform: translate(110vw, 100vh);
+  }
+
+  100% {
+    transform: translate(-110vw, 0);
+  }
+}
+
+@keyframes satelite {
+  to { transform: rotate(1turn) };
+}
+
+
+
