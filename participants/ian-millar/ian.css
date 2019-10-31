@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: black;
+}
+
+.title {
+    text-align: center;
+    font-size: 30px;
+    margin: 20px 0 40px 0;
+}
+
+.image {
+     
+}
+
+h1 {
+    color: red;
+    font-family: "Creepster", sans-serif;
+}

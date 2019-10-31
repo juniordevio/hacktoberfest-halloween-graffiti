@@ -1,0 +1,15 @@
+
+img{
+	max-width: 400px;
+	max-height: 400px;
+}
+
+body{
+	background-color: black;
+}
+
+h1{
+	text-transform: uppercase;
+	color: orange;
+	text-decoration: none;
+}

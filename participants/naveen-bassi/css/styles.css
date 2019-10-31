@@ -1,0 +1,33 @@
+body {
+  background-color:#FFFFFF;
+}
+
+div{
+  text-align: center;
+}
+
+img:hover {
+  transform: scaleX(-1);
+  align-items: center;
+}
+
+#ghost1 {
+  float: left;
+}
+
+#ghost2 {
+  transform: scaleX(-1);
+  float: right;
+}
+
+#ghost2:hover {
+  transform: scaleX(-1);
+}
+
+#main_heading {
+  font-size: 40px;
+}
+
+.content_divs {
+  display: none;
+}

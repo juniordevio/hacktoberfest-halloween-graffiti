@@ -1,0 +1,92 @@
+body, html {
+    
+        
+
+        /* The image used */
+        background-image: url("astro.jpg");
+  
+        /* Full height */
+        height: 100%;
+        width: 100%;
+      
+        /* Center and scale the image nicely */
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+  }
+  
+  
+
+  .sun {
+   
+    background-image: url("sun.png");
+    text-align: center;
+    top:50%;
+    margin: 0 auto;
+
+      /* Full height */
+      height: 100%;
+      width: 100%;
+
+      /* Set size correctly */
+      background-size: 150px;
+      width: 150px;
+      height: 150px;
+    
+     
+      position: absolute;
+      top:  35%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%); /* IE 9 */
+      -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
+     
+    
+  }
+
+  .mercury {
+      background-image: url("mercury.png");
+      text-align: center;
+      top:50%;
+      margin: 0 auto;
+
+      /* Full height */
+      height: 100%;
+      width: 100%;
+
+      /* Set size correctly */
+      background-size: 75px;
+      width: 75px;
+      height: 75px;
+    
+
+     
+
+     
+  }
+
+
+/* Causes orbit behavior */
+.universe {
+  -webkit-animation-iteration-count:infinite;
+  -webkit-animation-timing-function:linear;
+  -webkit-animation-name:orbit;
+  -webkit-animation-duration:5s;
+
+  height: 500px; 
+  width: 500px;
+
+  position: absolute;
+  top:  35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%); /* IE 9 */
+  -webkit-transform: translate(-50%, -50%); /* Chrome, Safari, Opera */
+}
+
+
+  @-webkit-keyframes orbit { 
+    from { -webkit-transform:rotate(0deg) } 
+    to { -webkit-transform:rotate(360deg) } 
+    }

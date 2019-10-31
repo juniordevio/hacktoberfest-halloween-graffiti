@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #000 
+}
+
+canvas {
+position: relative; top:50%;
+left:50%;
+margin-left:-50vmin;
+width:100vmin;
+height:100vmin;
+overflow:hidden;
+display: block;
+}
+

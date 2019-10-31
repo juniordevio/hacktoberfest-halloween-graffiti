@@ -1,0 +1,45 @@
+body {
+  background-color: black;
+}
+
+.wrapper {
+  width: 900px;
+  margin: 10px auto;
+  height: 700px;
+  background-color: rgb(17, 12, 12);
+
+  /* SHADOW */
+  -webkit-box-shadow: 5px 5px 25px 5px #1f1f1f;
+  box-shadow: 5px 5px 25px 5px #1f1f1f;
+}
+
+.header {
+  height: 130px;
+}
+
+.navigate {
+  background-image: url("bkgrnd.jpg");
+}
+
+.section_break {
+  height: 2px;
+  background: #3c3c3c;
+}
+
+.table {
+  display: table;
+  margin: 0px auto;
+}
+
+.menu {
+  padding: 0;
+  list-style-type: none;
+  font-family: Comic Sans MS;
+  color: #ff9900;
+  font-size: 30px;
+}
+
+.menu li {
+  display: inline-block;
+  padding: 0 20px 0 20px;
+}
