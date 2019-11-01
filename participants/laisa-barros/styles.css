@@ -1,0 +1,33 @@
+body {
+  margin: 0 auto;
+  background-color: #000;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    color: #348017;
+  }
+  50% {
+    color: #E66C2C;
+  }
+  75% {
+    color: #7D1B7E;
+  }
+  100% {
+    color: #C11B17;
+  }
+}
+
+.blink {
+  animation: blinking 5s infinite;
+}
+
+.centered {
+  text-align: center;
+  font-weight: bold;
+  font-size: 80px;
+  font-family: sans-serif;
+}
